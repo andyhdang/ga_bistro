@@ -1,8 +1,13 @@
 import React from 'react';
 
+//My Components
+import Header from './Header/Header.jsx';
+
 const App = () => {
     return (
-        <div>This is the Ga Bistro App</div>
+        <div className = 'wrapper'>
+            <Header />
+        </div>
     )
 }
 
