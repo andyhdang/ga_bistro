@@ -3,7 +3,7 @@ import './Header.scss';
 
 const Header = () => {
     return (
-        <header className={'Header'}>This is where my Header will be</header>
+        <header className={'Header'}>[Ga Bistro Logo]</header>
     );
 }
 
