@@ -6,14 +6,17 @@ const Nav = () => {
     return (
         <nav className='Nav'>
             
-            <div className="links">
+            <div id="links">
 
-            <a href="#" >About us</a>
-            <a href="#" >Menu</a>
-            <a href="#" >Reservations</a>
-            <a href="#" >Contact</a>
+            <a className="logo">[Ga Bistro Logo]</a>
+            <a className="alignright" href="#" >About us</a>
+            <a className="alignright" href="#" >Menu</a>
+            <a className="alignright" href="#" >Reservations</a>
+            <a className="alignright" href="#" >Contact</a>
 
             </div>
+
+
         </nav>
     )
 }

@@ -1,5 +1,37 @@
 .Main {
     background: rgb(177, 177, 177);
-    padding: 300px;
+    padding: 20px;
+    margin: 0px;
     text-align: center;
+
+    a {
+        
+        display: block;
+        text-align: center;
+        background-color: gray;
+        padding: 100px;
+        text-decoration: none;
+        color: black;
+        margin: 10px;
+        
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .Main {
+        padding: 300px;
+
+        a {
+
+            display: inline;
+            text-align: center;
+            background-color: gray;
+            padding: 100px;
+            text-decoration: none;
+            color: black;
+            margin: 50px;
+            
+        }
+    }
 }

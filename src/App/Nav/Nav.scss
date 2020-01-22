@@ -1,7 +1,12 @@
 .Nav {
     background: rgb(143, 143, 143);
     padding: 20px;
+    margin: 0px;
     text-align: center;
+    
+    .logo{
+        display: none;
+    }
 
     a {
         background-color: rgb(194, 194, 194);
@@ -23,11 +28,13 @@
 @media screen and (min-width: 600px) {
 
     .Nav {
-        background: rgb(143, 143, 143);
-        padding: 20px;
-        text-align: center;
     
+        .logo {
+            display: none;
+        }
+
         a {
+
             background-color: transparent;
             border-radius: none;
             text-decoration: none;
@@ -40,8 +47,30 @@
             }
         }
     
+
     }
 
 }
+
+@media screen and (min-width: 800px) {
+
+    .Nav {
+
+        .logo {
+            display: inline-block;
+        }
+        #links {
+            text-align: left;
+        }
+    
+        .alignright {
+            float: right;
+
+        }
+
+        }
+    }
+
+
 
 
