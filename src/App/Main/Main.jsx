@@ -4,7 +4,7 @@ import './Main.scss';
 
 const Main = () => {
     return (
-        <nav className = {'Main'}> [Slogan] + [Image] </nav>
+        <main className = {'Main'}> [Slogan] + [Image] </main>
     )
 }
 

@@ -4,7 +4,17 @@ import './Nav.scss';
 
 const Nav = () => {
     return (
-        <nav className = {'Nav'}> About us - Menu - Reservations - Contact </nav>
+        <nav className='Nav'>
+            
+            <div className="links">
+
+            <a href="#" >About us</a>
+            <a href="#" >Menu</a>
+            <a href="#" >Reservations</a>
+            <a href="#" >Contact</a>
+
+            </div>
+        </nav>
     )
 }
 
