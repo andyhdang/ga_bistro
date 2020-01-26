@@ -1,37 +1,54 @@
 .Main {
     background: rgb(177, 177, 177);
-    padding: 20px;
+    padding: 30px;
     margin: 0px;
+    height: 700px;
     text-align: center;
+    
+    display: flex;
 
-    a {
+    .placeholders {
+        display: flex;
         
-        display: block;
-        text-align: center;
-        background-color: gray;
-        padding: 100px;
-        text-decoration: none;
-        color: black;
-        margin: 10px;
-        
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .placeholder {
+            text-align: center;
+            text-decoration: none;
+            
+            background-color: gray;
+            color: black;
+    
+            width: 100%;
+
+            margin: 10px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .Main {
+        .placeholders {
+            .placeholder {
+                
+
+            }
+
+        }
     }
 }
 
-
 @media screen and (min-width: 800px) {
     .Main {
-        padding: 300px;
-
-        a {
-
-            display: inline;
-            text-align: center;
-            background-color: gray;
-            padding: 100px;
-            text-decoration: none;
-            color: black;
-            margin: 50px;
-            
+        padding: 50px;
+        .placeholders {
+            .placeholder {
+                width: 45%;
+                
+            }
         }
     }
 }

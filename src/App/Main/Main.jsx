@@ -6,12 +6,12 @@ const Main = () => {
     return (
         <main className = {'Main'}> 
 
-        <div className = {"MainLinks"}>
+            <div className= {'placeholders'}>
 
-            <a href="#">Slogan</a>
-            <a href="#">Image</a>
+            <div className={'placeholder slogan'}></div>
+            <div className={'placeholder image'}></div>
 
-        </div>
+            </div>
         
         </main>
     )
