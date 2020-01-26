@@ -3,6 +3,16 @@
     padding: 20px;
     margin: 0px;
     text-align: center;
+
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        &:hover {
+            color: white
+        }
+    }
     
     .logo{
         display: none;
@@ -29,6 +39,9 @@
 
     .Nav {
     
+        .hamburger {
+            display: none;
+        }
         .logo {
             display: none;
         }
