@@ -68,18 +68,16 @@
 @media screen and (min-width: 800px) {
 
     .Nav {
+        .navBarLinks {
+            display: flex;
+            justify-content: space-between;
 
-        .logo {
-            display: inline-block;
+            .logo {
+                display: inline-block;
+            }
         }
-        #links {
-            text-align: left;
-        }
-        .alignright {
-            float: right;
-        }
+    }
 
-        }
     }
 
 

@@ -36,13 +36,19 @@ const Nav = () => {
                 //if the showMenu is true
                 showMenu &&
 
-            <div id="links">
+            <div className="navBarLinks">
             
-                <a className="logo">[Ga Bistro Logo]</a>
-                <a className="alignright" href="#" >About us</a>
-                <a className="alignright" href="#" >Menu</a>
-                <a className="alignright" href="#" >Reservations</a>
-                <a className="alignright" href="#" >Contact</a>
+                <a className="logo" href="#">[Ga Bistro Logo]</a>
+            
+            <div className="navs">
+
+                <a className="nav about" href="#" >About us</a>
+                <a className="nav menu" href="#" >Menu</a>
+                <a className="nav reservations" href="#" >Reservations</a>
+                <a className="nav contact" href="#" >Contact</a>
+
+            </div>
+                
 
             </div>
             }
