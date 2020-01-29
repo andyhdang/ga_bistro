@@ -1,5 +1,5 @@
 //'useState' is part of the React App
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Nav.scss';
 
 //Front Awesome
@@ -11,6 +11,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 const Nav = () => {
 
     const [showMenu, updateShowMenu] = useState(true);
+    const [isSmall, updateIsSmall] = useState(true);
 
     const handleHamburgerClick = () => {
         console.log('You hit the hamburger')
@@ -26,12 +27,34 @@ const Nav = () => {
         updateShowMenu(newShowMenu);
     }
 
+    const handleIsSmall = () => {
+        console.log('You triggered handleIsSmall function');
+
+        if (window.innerWidth > 599) {
+            updateIsSmall(false);
+        } else {
+            updateIsSmall(true);
+        }
+    }
+
+    //useEffect says only do this when our Nav mounts for the first time.
+    useEffect(()=> {
+        window.addEventListener('resize', handleIsSmall);
+    }, []);
+    
+
+
     return (
         <nav className='Nav'>
             
-            <div className="hamburger" onClick={ handleHamburgerClick } >
-                <FontAwesomeIcon icon={ faBars} />
-            </div>
+            {
+                isSmall &&
+                <div className="hamburger" onClick={ handleHamburgerClick } >
+                    <FontAwesomeIcon icon={ faBars} />
+                </div>
+            }
+
+            
             {
                 //if the showMenu is true
                 showMenu &&

@@ -1,0 +1,30 @@
+.Tabbed {
+    .tabs {
+        display: flex;
+        
+        .tab {
+            background: gray;
+            padding: 10px 20px;
+            border-radius: 5px 5px 0px 0px;
+            margin-right: 10px;
+            
+        }
+    }
+
+    .content {
+        background-color: gray;
+        padding: 20px;
+
+        img {
+        }
+
+        h2{
+
+        }
+
+        p{
+
+        }
+
+    }
+}
