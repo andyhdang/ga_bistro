@@ -1,12 +1,14 @@
-//'useState' is part of the React App
+//'useState' and 'useEffect' is part of the React App
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+
+//style sheet
 import './Nav.scss';
 
 //Front Awesome
-
 //How do you know to import from 'FontAwesomeIcon'?
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
 
@@ -32,7 +34,7 @@ const Nav = () => {
 
     //useEffect says only do this when our Nav mounts for the first time.
     useEffect(()=> {
-        window.addEventListener('resize', handleWindowResize);
+        window.addEventListener('resize', handleWindowResize); //apply handleWindowResize when window is resized
         handleWindowResize();
     }, []);
     
@@ -47,21 +49,15 @@ const Nav = () => {
 
             
             {
-                showMenu && //if showMenu is true, reveal below
+            showMenu && //if showMenu is true, reveal below
 
-            <div className="navBarLinks">
-            
-                <a className="logo" href="#">[Ga Bistro Logo]</a>
-            
-            <div className="navs">
-
-                <a className="nav about" href="#" >About us</a>
-                <a className="nav menu" href="#" >Menu</a>
-                <a className="nav reservations" href="#" >Reservations</a>
-                <a className="nav contact" href="#" >Contact</a>
-
-            </div>
-                
+            <div className="links">
+                <div className="logo"><NavLink  to= '/' exact>Ga Bistro Logo</NavLink></div>
+                <div className="navlinks">
+                    <NavLink to='/' exact>About us</NavLink>
+                    <NavLink to='/menu'>Menu</NavLink>
+                    <NavLink to='/contact'>Contact</NavLink>
+                </div>
 
             </div>
             }

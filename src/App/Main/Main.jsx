@@ -1,21 +1,28 @@
 import React from 'react';
 import './Main.scss';
-import Tabbed from '../Tabbed/Tabbed.jsx';
+import { Switch, Route } from 'react-router-dom';
+
+
+import Welcome from '../Pages/Welcome.jsx';
+import Menu from '../Pages/Menu.jsx';
+import Contact from '../Pages/Contact.jsx';
 
 const Main = () => {
     return (
         <main className = {'Main'}> 
 
-                <div className= "placeholders one">
-                        <div className={'placeholder slogan'}>Slogan</div>
-                        <div className={'placeholder image'}>Image</div>
-                </div>
+        <Switch>
+            <Route path='/menu'>
+                <Menu />
+            </Route>
+            <Route path='/contact'>
+                <Contact />
+            </Route>     
+            <Route path='/'>
+                <Welcome />
+            </Route >
+        </Switch>
 
-                <div id='menu'><h2>Menu</h2></div>
-
-                 <div className= {'placeholders two'}>
-                        <Tabbed />
-                </div>
    
         </main>
     )
