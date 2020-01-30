@@ -6,21 +6,17 @@ const Main = () => {
     return (
         <main className = {'Main'}> 
 
-        <div className="mainPlaceholders">
-
-                <div className= {'placeholders one'}>
-                        <div className={'placeholder slogan'}></div>
-                        <div className={'placeholder image'}></div>
+                <div className= "placeholders one">
+                        <div className={'placeholder slogan'}>Slogan</div>
+                        <div className={'placeholder image'}>Image</div>
                 </div>
+
+                <div id='menu'><h2>Menu</h2></div>
 
                  <div className= {'placeholders two'}>
                         <Tabbed />
                 </div>
-
-        </div>
-        
-           
-        
+   
         </main>
     )
 }

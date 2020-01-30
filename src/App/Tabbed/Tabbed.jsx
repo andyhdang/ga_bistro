@@ -1,35 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Tabbed.scss';
 
 const tabItems = [
     {
         image: '/img/chickenWings.jpg',
-        title: 'About',
-        text: 'This is the About text content',
+        title: 'Appetizers',
+        text: 'This is the Appetizers text content',
     },
     {
-        image: '/img/chickenWings.jpg',
-        title: 'About',
-        text: 'This is the About text content',
+        image: '/img/platter.jpg',
+        title: 'Entrees',
+        text: 'This is the Entrees text content',
     },
     {
-        image: '/img/chickenWings.jpg',
-        title: 'About',
-        text: 'This is the About text content',
+        image: '/img/icedTea.jpg',
+        title: 'Drinks',
+        text: 'This is the Drinks text content',
     },
 ]
 
 const Tabbed = () => {
 
-    const currentTab = tabItems[1];
+    const [currentTab, setCurrentTab] = useState(tabItems[1]);
+    
 
 
     return (
         <div className={'Tabbed'} >
              <div className="tabs">
-                <div className="tab">Appetizers</div>
-                <div className="tab">Entrees</div>
-                <div className="tab">Drinks</div>
+                <div onClick={ () => { setCurrentTab(tabItems[0]) } }className="tab">Appetizers</div>
+                <div onClick={ () => { setCurrentTab(tabItems[1]) } }className="tab">Entrees</div>
+                <div onClick={ () => { setCurrentTab(tabItems[2]) } }className="tab">Drinks</div>
 
              </div>
              <div className="content">
