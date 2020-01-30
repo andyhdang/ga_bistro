@@ -11,35 +11,29 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 const Nav = () => {
 
     const [showMenu, updateShowMenu] = useState(true);
-    const [isSmall, updateIsSmall] = useState(true);
 
     const handleHamburgerClick = () => {
-        console.log('You hit the hamburger')
-        
-        let newShowMenu;
 
         if (showMenu === true) {
-            newShowMenu = false;
-        }else {
-            newShowMenu = true;
+            updateShowMenu(false);
+        } else {
+            updateShowMenu(true);
         }
-
-        updateShowMenu(newShowMenu);
     }
 
-    const handleIsSmall = () => {
-        console.log('You triggered handleIsSmall function');
+    const handleWindowResize = () => {
 
         if (window.innerWidth > 599) {
-            updateIsSmall(false);
+            updateShowMenu(true);
         } else {
-            updateIsSmall(true);
+            updateShowMenu(false);
         }
     }
 
     //useEffect says only do this when our Nav mounts for the first time.
     useEffect(()=> {
-        window.addEventListener('resize', handleIsSmall);
+        window.addEventListener('resize', handleWindowResize);
+        handleWindowResize();
     }, []);
     
 
@@ -47,17 +41,13 @@ const Nav = () => {
     return (
         <nav className='Nav'>
             
-            {
-                isSmall &&
                 <div className="hamburger" onClick={ handleHamburgerClick } >
                     <FontAwesomeIcon icon={ faBars} />
                 </div>
-            }
 
             
             {
-                //if the showMenu is true
-                showMenu &&
+                showMenu && //if showMenu is true, reveal below
 
             <div className="navBarLinks">
             
