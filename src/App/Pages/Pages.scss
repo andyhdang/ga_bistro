@@ -1,31 +1,53 @@
 .Pages {
-    outline: solid 1px red;
-    padding: 20px;
-    margin: 50px auto;
+    margin: 0px;
+
+    .banner {
+        font-size: 20pt;
+        color: white;
+        text-align: center;
+
+        background-color: #540202;
+        // background-image: url(/img/food-spread1.jpg);
+        // background-size: cover;
+
+        width: 100%;
+        line-height: 1000%;
+
+        h1 {
+            margin: 0px;
+        }
+    }
+
+    .container {
+        background-color: rgb(196, 196, 196);
+        height: 500px;
+    }
 }
 
 //Welcome
-.placeholders {
-    margin: 20px;
-}
 
-.placeholders.one {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+.Pages.Welcome {
 
-.placeholder {
-    display: inline-block;
-    padding: 200px;
-    margin: 10px;
-    background-color: gray;
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        opacity: 0.5;
+        margin: 0px;
+    }
 }
 
 //Menu
-#menu {
-    padding: 20px;
-    color: rgb(41, 41, 41);
+
+.Pages.Menu {
+    background-color: rgb(196, 196, 196);
+    padding-bottom: 20px;
 }
+
+
 
 //Contact

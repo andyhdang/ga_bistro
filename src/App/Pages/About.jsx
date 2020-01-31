@@ -1,21 +1,18 @@
 import React from 'react';
 import './Pages.scss';
 
-
-const Welcome = () => {
+const About = () => {
     return (
-        <div className="Pages Welcome">
-            
+        <div className="Pages About">
+
             <div className="banner">
-                <h1>Welcome</h1>
+                <h1>About Us</h1>
 
                 <div className="container"></div>
-               
-    
             </div>
 
         </div>
     )
 }
-export default Welcome
+export default About
 

@@ -54,7 +54,8 @@ const Nav = () => {
             <div className="links">
                 <div className="logo"><NavLink  to= '/' exact>Ga Bistro Logo</NavLink></div>
                 <div className="navlinks">
-                    <NavLink to='/' exact>About us</NavLink>
+                    <NavLink to='/' exact>Home</NavLink>
+                    <NavLink to='/about'>About us</NavLink>
                     <NavLink to='/menu'>Menu</NavLink>
                     <NavLink to='/contact'>Contact</NavLink>
                 </div>
