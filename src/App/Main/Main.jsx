@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Welcome from '../Pages/Welcome.jsx';
 import About from '../Pages/About.jsx';
-import Menu from '../Pages/Menu.jsx';
+import Menu from '../Pages/Menu/Menu.jsx';
 import Contact from '../Pages/Contact.jsx';
 
 const Main = () => {
