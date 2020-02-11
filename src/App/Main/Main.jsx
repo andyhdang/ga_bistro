@@ -3,10 +3,10 @@ import './Main.scss';
 import { Switch, Route } from 'react-router-dom';
 
 
-import Welcome from '../Pages/Welcome.jsx';
-import About from '../Pages/About.jsx';
+import Welcome from '../Pages//Welcome/Welcome.jsx';
+import About from '../Pages/About/About.jsx';
 import Menu from '../Pages/Menu/Menu.jsx';
-import Contact from '../Pages/Contact.jsx';
+import Contact from '../Pages/Contact/Contact.jsx';
 
 const Main = () => {
     return (

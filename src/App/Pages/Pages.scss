@@ -1,53 +1,39 @@
 .Pages {
     margin: 0px;
+    text-align: center;
 
     .banner {
         font-size: 20pt;
         color: white;
         text-align: center;
-
         background-color: #540202;
-        // background-image: url(/img/food-spread1.jpg);
-        // background-size: cover;
-
         width: 100%;
         line-height: 1000%;
+        
+        // background-image: url(/img/food-spread1.jpg);
+        // background-size: cover;
 
         h1 {
             margin: 0px;
         }
+        
+        
     }
 
     .container {
         background-color: rgb(196, 196, 196);
         height: 500px;
+        
+            h2 {
+                margin-top: 0px;
+                padding: 30px;
+            }
+
+            p {
+            padding: 0px 300px;
+            }
     }
+
+    
+
 }
-
-//Welcome
-
-.Pages.Welcome {
-
-    .container {
-        display: block;
-        text-align: center;
-    }
-
-    img {
-        height: auto;
-        width: 100%;
-        opacity: 0.5;
-        margin: 0px;
-    }
-}
-
-//Menu
-
-.Pages.Menu {
-    background-color: rgb(196, 196, 196);
-    padding-bottom: 20px;
-}
-
-
-
-//Contact

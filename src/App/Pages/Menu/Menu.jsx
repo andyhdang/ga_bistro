@@ -26,8 +26,11 @@ const Menu = () => {
             </div>
 
             <Tabbed />
-            <MenuItems />
-    
+            <div className="container">
+               <MenuItems />
+     
+            </div>
+            
         </div>
     )
 }
