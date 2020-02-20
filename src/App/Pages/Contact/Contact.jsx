@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Pages.scss';
+// import '../Pages.scss';
 import './Contact.scss';
 
 import Address from './Address/Address.jsx';
@@ -10,6 +10,7 @@ import GoogleMap from './GoogleMap/GoogleMap.jsx';
 const Contact = () => {
     return (
         <div className="Pages Contact">
+            <h1 className= "banner">Contact</h1>
             <div className="row row1">
                 <div className="column column1"><Address /></div>
                 <div className="column column2"><ContactForm /></div>

@@ -4,10 +4,9 @@ import './Header.scss';
 const Header = () => {
     return (
         <header className="Header">
-
-            <div>Ga Bistro Logo</div>
-
+            <div className= "logo">Ga Bistro</div>
         </header>
+
     );
 }
 

@@ -1,15 +1,24 @@
-.Contact {
 
+.Contact {
     padding: 0px;
 
-    border: solid 2px red;
+    .banner {
+        background-color: #EEEEEE;
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        font-size: 50px;
+        color: white;
+        padding-left: 18%;
+        margin-bottom: 20px;   
+    }
 
     .row {
-        border: solid 2px green;
+        background-color: #EEEEEE;
+        margin-top: 20px;
     }
 
     .column {
-        border: solid 2px blue;
+        background-color: #EEEEEE;
     }
 } 
 

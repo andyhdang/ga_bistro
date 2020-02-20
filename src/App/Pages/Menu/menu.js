@@ -4,4 +4,4 @@ export const menuItems =[
     { name: 'Item 3', img: '/img/entree-3.jpg'},
     { name: 'Item 4', img: '/img/entree-4.jpg'},
     { name: 'Item 5', img: '/img/entree-5.jpg'},
-];
+]; 

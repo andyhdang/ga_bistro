@@ -52,7 +52,6 @@ const Nav = () => {
             showMenu && //if showMenu is true, reveal below
 
             <div className="links">
-                <div className="logo"><NavLink  to= '/' exact>Ga Bistro Logo</NavLink></div>
                 <div className="navlinks">
                     <NavLink to='/' exact>Home</NavLink>
                     <NavLink to='/about'>About us</NavLink>
