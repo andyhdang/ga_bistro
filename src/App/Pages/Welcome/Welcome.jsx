@@ -8,6 +8,8 @@ import { menuItems } from '../Menu/menu.js';
 //about us container 
 import About from '../About/About.jsx';
 
+import Staff from '../Staff/Staff.jsx';
+
 
 const MenuItems =() => {
     return menuItems.map( (menuItems, idx) => {
@@ -35,6 +37,10 @@ const Welcome = () => {
             <div className= "container about">
                 <About />
             </div>
+            <div className="container services">
+                <Staff />
+            </div>
+
         </div>
     )
 }

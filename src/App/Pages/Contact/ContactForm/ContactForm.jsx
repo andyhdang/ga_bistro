@@ -91,6 +91,7 @@ const ContactForm = () => {
             case 'space:':
             case 'enter':
                 handleFormSubmit();
+                break;
             default:
                 return true;
         }
