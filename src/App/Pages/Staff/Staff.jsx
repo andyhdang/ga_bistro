@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Staff.scss';
 // import { staffMembers } from './staff.js';
 import API from '../../common/API.js';
+import Employee from './Employee.jsx';
 
 const StaffMembers = () => {
 
@@ -18,10 +19,10 @@ const StaffMembers = () => {
 
     return staffMembers.map((staffMember, idx) => {
         return (
-            <div key={ idx } className= "StaffMember">
-                <img src= { staffMember.image } alt={ staffMember.name }/>
-                <h3> { staffMember.name }</h3>
-            </div>
+            <Employee 
+                key= { idx } 
+                staffMember={ staffMember } 
+            />
         );
     });
 }
