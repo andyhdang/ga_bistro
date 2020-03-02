@@ -7,12 +7,16 @@ import Welcome from '../Pages//Welcome/Welcome.jsx';
 import About from '../Pages/About/About.jsx';
 import Menu from '../Pages/Menu/Menu.jsx';
 import Contact from '../Pages/Contact/Contact.jsx';
+import Services from '../Pages/Services/Services.jsx';
 
 const Main = () => {
     return (
         <main className = {'Main'}> 
 
         <Switch>
+            <Route path='/services'>
+                <Services />
+            </Route>
             <Route path='/about'>
                 <About />
             </Route>

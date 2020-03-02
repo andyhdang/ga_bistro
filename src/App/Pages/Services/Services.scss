@@ -1,0 +1,43 @@
+.Services {
+    background-color: teal;
+    margin: 50px 0px;
+    padding: 20px;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .TheServices {
+        width: 300px;
+        margin: 20px;
+    
+        img{
+            display: block;
+        }
+    
+        h3 {
+            margin: 0px;
+            background-color: white;
+            padding: 5px 10px;
+        }
+    
+    }
+
+    button {
+        width: 200px;
+        background-color: teal;
+        line-height: 30px;
+        color: white;
+        font-size: 16px;
+
+        &.active {
+            background-color: orange;
+        }
+
+
+
+    }
+}
+

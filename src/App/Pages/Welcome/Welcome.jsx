@@ -7,8 +7,8 @@ import { menuItems } from '../Menu/menu.js';
 
 //about us container 
 import About from '../About/About.jsx';
-
 import Staff from '../Staff/Staff.jsx';
+import Slideshow from './Slideshow/Slideshow';
 
 
 const MenuItems =() => {
@@ -37,6 +37,9 @@ const Welcome = () => {
             <div className= "container about">
                 <About />
             </div>
+
+            <Slideshow />
+
             <div className="container services">
                 <Staff />
             </div>
