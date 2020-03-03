@@ -1,29 +1,24 @@
 import React, { useRef, useState } from 'react';
-import './ContactForm.scss';
-import { emailCheck } from '../../../common/utilities.js';
-import classnames from 'classnames';
+import './LoginForm.scss';
+import { emailCheck } from '../../common/utilities.js';
 import keycode from 'keycode';
-import API from '../../../common/API.js';
+import API from '../../common/API.js';
+import classnames from 'classnames';
 
-
-const ContactForm = () => {
-
-    //state
+const LoginForm = () => {
+    
     const [emailIsValid, updateEmailIsValid] = useState(true);
     const [formIsValid, updateFormIsValid] = useState(true);
     const [errors, updateErrorsArray] = useState([]);
 
-
-    //Refs (reference) :: Giving React's virtual DOM access to the Physical DOM elements on the page
     const emailRef = useRef();
-    const messageRef = useRef();
+    const passwordRef = useRef();
 
     const handleFormSubmit = () => {
         console.log('You Clicked Me');
 
         let errorMessages = [];
 
-        //validate the user filled in the form
         if (emailRef.current.value.length < 4) {
             errorMessages.push({
                 message: 'You forgot to fill out the Email field.',
@@ -36,32 +31,28 @@ const ContactForm = () => {
             })
         }
 
-        if (messageRef.current.value.length < 1) {
+        if (passwordRef.current.value.length < 1) {
             errorMessages.push({
-                message: 'You forgot to fill out the Message field.',
+                message: 'You forgot to fill out the Password field.',
             })
         }
 
         updateErrorsArray(errorMessages); 
 
-        //keep track of errors - and update the DOM with feedback is there is an error.
             if (errorMessages.length > 0) {
                 updateFormIsValid(false);
             } else {
                 updateFormIsValid(true);
-               //if all is successful - we want to post the data 
                console.log('Posting the data')
-               
+        
                const postData ={
                    email: emailRef.current.value,
-                   message: messageRef.current.value,
+                   password: passwordRef.current.value,
                }
 
-               API.post('email/send', postData).then((results)=> {
+               API.post('login/validate', postData).then((results)=> {
                    console.log('Posting the data', results);
                });
-
-
             }
     }
 
@@ -85,7 +76,6 @@ const ContactForm = () => {
         })
     }
 
-    // also used for drop down lists and popup menus
     const handleKeyDown = (event) => {
         switch (keycode(event)) {
             case 'space:':
@@ -97,21 +87,17 @@ const ContactForm = () => {
         }
     }
 
-
-
-    //const theClassName = (formIsValid) ? 'ContactForm form-valid': 'ContactForm form-invalid';
-
     const theClassName = classnames ({
-        'ContactForm': true,
+        'LoginForm': true,
         'form-valid': formIsValid,
         'form-invalid': !formIsValid,
     });
-
+    
     return (
-        
+
         <div className= { theClassName }>
 
-           { 
+            { 
                 (errors.length > 0) &&
                 <div className="error-message">
                     ERROR MESSAGES GO HERE
@@ -123,7 +109,7 @@ const ContactForm = () => {
 
             <div className="form-group">
                 <div className="left">
-                    <label htmlFor="email">Email</label> 
+                    <label htmlFor="email">Login</label> 
                 </div>
                 <div className="right">
                     <input 
@@ -136,27 +122,37 @@ const ContactForm = () => {
                     />
                 </div>
             </div>
-            <div className="form-group">
-                <div className="left">
-                    <label htmlFor="message">Message</label>
-                </div>
-                <div className="right">
-                    <textarea ref={ messageRef } name="message" id="message" placeholder="your message goes here">
-                    </textarea>
-                </div>  
+
+        <div className="form-group">
+            <div className="left">
+                <label htmlFor="password">Password</label>
             </div>
-            <div className="form-group">
+            <div className="right">
+                <input 
+                    ref={ passwordRef } 
+                    type="password" 
+                    id="password" 
+                    placeholder="Please Enter Your Password Here">
+                </input>
+            </div>  
+        </div>
+        
+
+        <div className="form-group">
                 <div className="left" />
                 <div className="right">
                     <button
                         tab-index={ 0 }
                         onClick= { handleFormSubmit }
                         onKeyDown= { handleKeyDown }
-                    >Send Email</button>
+                    >Login</button>
                 </div>
             </div>
-        </div>
-    )
-}
 
-export default ContactForm;
+
+        </div>
+
+    );
+};
+
+export default LoginForm;
